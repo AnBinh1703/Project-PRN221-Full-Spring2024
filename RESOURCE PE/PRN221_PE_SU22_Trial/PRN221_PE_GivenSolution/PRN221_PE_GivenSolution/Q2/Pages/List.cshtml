@@ -1,0 +1,74 @@
+﻿@page
+@model Q2.Pages.ListModel
+@using Q2.Models
+@{
+    Layout = "_Layout";
+    var services = (List<Service>)ViewData["services"];
+}
+<h2>Service Manager</h2>
+<form method="post" asp-page-handler="Search">
+    <div class="col-lg-4">
+        Room<input type="text" name="title" class="col-lg-8 ms-1" />
+    </div>
+    <div class="col-lg-4 ms-5 mt-1">
+        <input type="submit" class="col-lg-2" value="Search" />
+    </div>
+</form>
+<h3>Create</h3>
+<a href="/Ser/Create">Create New Service</a>
+
+<h3>List of services</h3>
+<form method="post" asp-page-handler="Import" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-lg-3">
+            <input type="file" name="xmlFile" />
+        </div>
+        <div class="col-lg-3">
+            <input type="submit" value="Import" />
+        </div>
+    </div>
+</form>
+
+<table class="mt-3 table-bordered">
+    <thead>
+        <tr>
+            <th>Room Title</th>
+            <th>FeeType</th>
+            <th>Month</th>
+            <th>Year</th>
+            <th>Amount</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in services)
+        {
+            <tr>
+                <td class="p-1">@s.RoomTitle</td>
+                <td class="p-1">@s.FeeType</td>
+                <td class="p-1">@s.Month</td>
+                <td class="p-1">@s.Year</td>
+                <td class="p-1">@s.Amount</td>
+                @if (s.PaymentDate == null)
+                {
+                    <td class="p-1">Unpaid</td>
+                }
+                else
+                {
+                    <td class="p-1">Service has been paid. Employee: @s.EmployeeNavigation.Name</td>
+                }
+                <td class="p-1"><a href="/Detail/?Id=@s.Id">Detail </a></td>
+                 <td class="p-1"><a href="/Edit/?Id=@s.Id">Update </a></td>
+                 <td class="p-1"><a href="/Delete/?Id=@s.Id">Delete</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/sitesign.js" ></script>
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>

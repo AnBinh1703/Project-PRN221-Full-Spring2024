@@ -1,0 +1,95 @@
+﻿<Window x:Class="Q1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Q1"
+        xmlns:controls="clr-namespace:System.Windows.Controls;assembly=PresentationFramework"
+        mc:Ignorable="d"
+        Title="EmployeeWindow" Width="1500" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
+
+    <Grid>
+        <DockPanel VerticalAlignment="Top" Margin="5">
+
+            <Grid Width="1500">
+                <Grid.RowDefinitions>
+                    <RowDefinition  Height="Auto" />
+                    <RowDefinition  Height="Auto" />
+                    <RowDefinition  Height="180" />
+                    <RowDefinition  Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Background="LightBlue" Orientation="Vertical"
+                            HorizontalAlignment="Center" Width="500">
+
+                    <Label Name="lbTitle" Foreground="Red" FontWeight="DemiBold"
+                           FontSize="20" Content="Employee Information"/>
+
+                    <Label Name="lbEmpId" Content="Employee Id"/>
+                    <TextBox Name="txtEmpId" HorizontalAlignment="Stretch"
+                             Height="25" Text="{Binding Path=Id, Mode=OneWay}"
+                             DataContext="{Binding ElementName=lvEmps,Path=SelectedItem}" IsReadOnly="true"/>
+
+                    <Label Name="lbEmpName" Content="Employee Name"/>
+                    <TextBox Name="txtEmpName" HorizontalAlignment="Stretch"
+                                Height="25" Text="{Binding Path=Name, Mode=OneWay}"
+                                DataContext="{Binding ElementName=lvEmps,Path=SelectedItem}"/>
+
+                    <Label Name="lbEmpGender" Content="Gender"></Label>
+                    <WrapPanel>
+                        <RadioButton Name="male" IsChecked ="True">Male</RadioButton>
+                        <RadioButton Name="female">Female</RadioButton>
+                    </WrapPanel>
+
+                    <Label Name="lbdob" Content="Date of birth" />
+                    <controls:DatePicker Name="myDatePicker" HorizontalAlignment="Stretch"
+                             Height="25" Text="{Binding Path=Dob,Mode=OneWay}"
+                             DataContext="{Binding ElementName=lvEmps,Path=SelectedItem}"/>
+
+                    <Label Name="lbPhone" Content="Phone"></Label>
+                    <TextBox Name="txtPhone" HorizontalAlignment="Stretch"
+                             Height="25" Text="{Binding Path=Phone, Mode=OneWay}"
+                             DataContext="{Binding  ElementName=lvEmps, Path=SelectedItem}"/>
+
+                    <Label Name="lbIDNumber" Content="IDNumber"></Label>
+                    <TextBox Name="txtIDNumber" HorizontalAlignment="Stretch"
+         Height="25" Text="{Binding Path=Idnumber, Mode=OneWay}"
+         DataContext="{Binding ElementName=lvEmps,Path=SelectedItem}"/>
+
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="btnLoad" Margin="10" Width="80" Content="Refresh" Click="btnLoad_Click"/>
+                    <Button x:Name="btnInsert" Margin="10" Width="80" Content="Add" Click="btnInsert_Click"/>
+                    <Button x:Name="btnUpdate" Margin="10" Width="80" Content="Edit" Click="btnUpdate_Click"/>
+                    <Button x:Name="btnDelete" Margin="10" Width="80" Content="Delete" Click="btnDelete_Click"/>
+                    <Button x:Name="btnAddToList" Margin="10" Width="80" Content="Add To List" Click="btnAdd_To_List"/>
+                    <Button x:Name="btnSaveDB" Margin="10" Width="80" Content="Save DB" Click="btnSave_DB"/>
+                    <Button x:Name="btnImportJson" Margin="10" Width="80" Content="Import Json" Click="btnImport_Json"/>
+                    <Button x:Name="btnExportJson" Margin="10" Width="80" Content="Export Json" Click="btnExport_Json"/>
+                    <Button x:Name="btnImportXml" Margin="10" Width="80" Content="Import xml" Click="btnImport_Xml"/>
+                    <Button x:Name="btnExportXml" Margin="10" Width="80" Content="Export xml" Click="btnExport_Xml"/>
+                    <Button x:Name="btnImportTxt" Margin="10" Width="80" Content="Export txt" Click="btnImport_Txt"/>
+                    <Button x:Name="btnExportTxt" Margin="10" Width="80" Content="Export txt" Click="btnExport_Txt"/>
+                </StackPanel>
+
+
+                <ListView Grid.Row="2" Name="lvEmps" Width="Auto" Height="Auto" SelectionChanged="lvEmps_SelectionChanged">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Employee Id" Width="100" DisplayMemberBinding="{Binding Path=Id}"/>
+                            <GridViewColumn Header="Employee Name" Width="200" DisplayMemberBinding="{Binding Path=Name}"/>
+                            <GridViewColumn Header="Gender" Width="100" DisplayMemberBinding="{Binding Path=Gender}"/>
+                            <GridViewColumn Header="DateOfBirth" Width="150" DisplayMemberBinding="{Binding Path=Dob , StringFormat=yyyy-MM-dd}"/>
+                            <GridViewColumn Header="Phone" Width="150" DisplayMemberBinding="{Binding Path=Phone}"/>
+                            <GridViewColumn Header="IDNumber" Width="100" DisplayMemberBinding="{Binding Path=Idnumber}"/>
+                        </GridView>
+                    </ListView.View>
+
+                </ListView>
+
+                
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

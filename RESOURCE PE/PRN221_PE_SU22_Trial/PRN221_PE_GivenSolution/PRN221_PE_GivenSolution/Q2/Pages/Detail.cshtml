@@ -1,0 +1,30 @@
+﻿@page
+@model Q2.Pages.DetailModel
+@{
+    
+}
+<div>
+        Id: <input type="text" value="@Model.service.Id" readonly/>
+    </div>
+    <div>
+        Room Title: <input type="text"value="@Model.service.RoomTitle" readonly/>
+    </div>
+    <div>
+        Fee Type: <input type="text" value="@Model.service.FeeType" readonly/>
+    </div>
+
+    <div>
+        Month: <input type="text" value="@Model.service.Month" readonly/>
+    </div>
+
+    <div>
+        Year: <input type="text" value="@Model.service.Year" readonly/>
+    </div>
+
+    <div>
+        Amount: <input type="text"  value="@Model.service.Amount" readonly />
+    </div>
+    <div>
+        Employee: <input type="text" value="@Model.service.EmployeeNavigation" readonly/>
+    </div>
+

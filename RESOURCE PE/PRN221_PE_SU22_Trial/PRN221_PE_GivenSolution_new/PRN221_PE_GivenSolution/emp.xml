@@ -1,0 +1,11 @@
+<Employee>
+    <Id>1</Id>
+    <Name>John Doe</Name>
+    <Gender>Male</Gender>
+    <Dob>1980-01-01T00:00:00</Dob>
+    <Phone>1234567890</Phone>
+    <Idnumber>ABC123456</Idnumber>
+    <Services>
+        
+    </Services>
+</Employee>

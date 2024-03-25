@@ -1,0 +1,45 @@
+﻿@page
+@model Q2.Pages.EditModel
+@{
+}
+<form method="post">
+    <div>
+        Id: <input type="text" name="editService.Id" value="@Model.service.Id" />
+    </div>
+    <div>
+        Room Title: <input type="text" name="editService.RoomTitle" value="@Model.service.RoomTitle" />
+    </div>
+    <div>
+        Fee Type: <input type="text" name="editService.FeeType" value="@Model.service.FeeType" />
+    </div>
+
+    <div>
+        Month: <input type="text" name="editService.Month" value="@Model.service.Month" />
+    </div>
+
+    <div>
+        Year: <input type="text" name="editService.Year" value="@Model.service.Year" />
+    </div>
+
+    <div>
+        Amount: <input type="text" name="editService.Amount" value="@Model.service.Amount" />
+    </div>
+    <div>
+        PaymentDate: <input type="datetime-local" data-val="true" name="editService.PaymentDate" value="service.PaymentDate" />
+    </div>
+    <div>
+        <select name= "editService.Employee" >
+            <option >Not Pay</option>
+
+            @foreach (var item in Model.employees)
+            {
+                <option value ="@item.Id">@item.Name</option>
+            }
+        </select>
+
+    </div>
+    <div>
+        <button type="submit">Update</button>
+    </div>
+
+</form>

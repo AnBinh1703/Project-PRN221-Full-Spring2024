@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "RoomTitle": "401",
+    "Month": 1,
+    "Year": 2022,
+    "FeeType": "ManagementFee",
+    "Amount": 1596000.0000,
+    "PaymentDate": null,
+    "Employee": null
+  },
+  {
+    "Id": 2,
+    "RoomTitle": "402",
+    "Month": 1,
+    "Year": 2022,
+    "FeeType": "ManagementFee",
+    "Amount": 1656000.0000,
+    "PaymentDate": null,
+    "Employee": null
+  },
+  {
+    "Id": 3,
+    "RoomTitle": "403",
+    "Month": 1,
+    "Year": 2022,
+    "FeeType": "ManagementFee",
+    "Amount": 1848000.0000,
+    "PaymentDate": "2022-01-08T00:00:00",
+    "Employee": 1
+  },
+  {
+    "Id": 4,
+    "RoomTitle": "404",
+    "Month": 1,
+    "Year": 2022,
+    "FeeType": "ManagementFee",
+    "Amount": 1968000.0000,
+    "PaymentDate": "2022-01-11T00:00:00",
+    "Employee": 2
+  },
+  {
+    "Id": 5,
+    "RoomTitle": "405",
+    "Month": 1,
+    "Year": 2022,
+    "FeeType": "ManagementFee",
+    "Amount": 2160000.0000,
+    "PaymentDate": "2022-01-20T00:00:00",
+    "Employee": 4
+  },
+  {
+    "Id": 6,
+    "RoomTitle": "501",
+    "Month": 1,
+    "Year": 2022,
+    "FeeType": "ManagementFee",
+    "Amount": 1596000.0000,
+    "PaymentDate": null,
+    "Employee": null
+  },
+  {
+    "Id": 7,
+    "RoomTitle": "502",
+    "Month": 1,
+    "Year": 2022,
+    "FeeType": "ManagementFee",
+    "Amount": 1656000.0000,
+    "PaymentDate": null,
+    "Employee": null
+  },
+  {
+    "Id": 8,
+    "RoomTitle": "503",
+    "Month": 1,
+    "Year": 2022,
+    "FeeType": "ManagementFee",
+    "Amount": 1848000.0000,
+    "PaymentDate": "2022-01-08T00:00:00",
+    "Employee": 1
+  },
+  {
+    "Id": 9,
+    "RoomTitle": "504",
+    "Month": 1,
+    "Year": 2022,
+    "FeeType": "ManagementFee",
+    "Amount": 1968000.0000,
+    "PaymentDate": "2022-01-11T00:00:00",
+    "Employee": 2
+  }
+]

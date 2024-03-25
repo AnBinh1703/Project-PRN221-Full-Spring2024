@@ -1,0 +1,48 @@
+﻿@page
+@model Q2.Pages.CreateModel
+@{
+}
+
+<h2>Day la add</h2>
+<form method="post">
+    <div>
+        Room Title: <input type="text" name="service.RoomTitle" />
+    </div>
+     <div>
+        Month: <input type="text" name="service.Month" />
+    </div>
+
+     <div>
+        Year: <input type="text" name="service.Year" />
+    </div>
+
+     <div>
+        FeeType: <input type="text" name="service.FeeType" />
+    </div>
+
+     <div>
+        Amount: <input type="text" name="service.Amount" />
+    </div>
+    <div>
+        Payment Date: <input type="date" name="service.PaymentDate" />
+    </div>
+
+   @* <div>
+        Employee: <input type="text" name="service.Employee" />
+    </div>*@
+    <div>
+        <select name= "service.Employee">
+            <option >Not Pay</option>
+
+            @foreach (var item in Model.employees)
+            {
+                <option value ="@item.Id">@item.Name</option>
+            }
+        </select>
+
+    </div>
+    <div>
+        <button type="submit">Add</button>
+    </div>
+
+</form>
