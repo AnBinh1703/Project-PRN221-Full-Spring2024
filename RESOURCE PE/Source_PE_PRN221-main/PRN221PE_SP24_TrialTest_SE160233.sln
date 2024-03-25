@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRN221PE_SP24_TrialTest_SE160233_Repo", "PRN221PE_SP24_TrialTest_SE160233_Repo\PRN221PE_SP24_TrialTest_SE160233_Repo.csproj", "{9F71008A-1112-4C5A-A943-7EFCF7BD0A0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRN221PE_SP24_TrialTest_SE160233_RazorPage", "PRN221PE_SP24_TrialTest_SE160233_RazorPage\PRN221PE_SP24_TrialTest_SE160233_RazorPage.csproj", "{4A5E2A58-F3FB-4265-939A-205F6BDD061D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F71008A-1112-4C5A-A943-7EFCF7BD0A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F71008A-1112-4C5A-A943-7EFCF7BD0A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F71008A-1112-4C5A-A943-7EFCF7BD0A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F71008A-1112-4C5A-A943-7EFCF7BD0A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A5E2A58-F3FB-4265-939A-205F6BDD061D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5E2A58-F3FB-4265-939A-205F6BDD061D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5E2A58-F3FB-4265-939A-205F6BDD061D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5E2A58-F3FB-4265-939A-205F6BDD061D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C1369F4-0CDE-4CCF-8EDE-5253DEFB5FF3}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,101 @@
+﻿@page
+@model PRN221PE_SP24_TrialTest_SE160233_RazorPage.Pages.EyeGlassPage.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+@if (TempData.TryGetValue("ErrorMessage", out var errorMessage))
+{
+    <div class="alert alert-danger" role="alert">
+        @errorMessage
+    </div>
+}
+
+<form method="get">
+    <label for="price">Min Price:</label>
+    <input type="number" id="min Price" name="minPrice" value="@Model.MinPrice" />
+    <label for="maxPrice">Max Price:</label>
+    <input type="number" id="maxPrice" name="maxPrice" value="@Model.MaxPrice" />
+    <label for="des">Description:</label>
+    <input type="text" id="des" name="des" value="@Model.Des" />
+    <button type="submit">Search</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a>EyeglassID</a>
+            </th>
+            <th>
+                <a>EyeglassesName</a>
+            </th>
+            <th>
+                <a>EyeglassesDescription</a>
+            </th>
+            <th>
+                <a>FrameColor</a>
+            </th>
+            <th>
+                <a>Price</a>
+            </th>
+            <th>
+                <a>Quantity</a>
+            </th>
+            <th>
+                <a>CreatedDate</a>
+            </th>
+            <th>
+                <a>LensType</a>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Eyeglass) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EyeglassesId)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EyeglassesName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EyeglassesDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrameColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LensType.LensTypeId)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.EyeglassesId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.EyeglassesId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.EyeglassesId">Delete</a>
+            </td>
+        </tr>
+}
+
+    </tbody>
+</table>
+@for (int i = 0; i < Model.PageCount; i++)
+{
+    <button type="submit" name="PageIndex" value="@(i + 1)">@(i+1)</button>
+}
+</form>
