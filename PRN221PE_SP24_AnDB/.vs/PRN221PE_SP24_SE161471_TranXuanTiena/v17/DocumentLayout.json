@@ -1,0 +1,97 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\PE Exam\\PRN221PE_SP24_TranXuanTien\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F090444F-A57E-48E6-BA00-F178E0217CB2}|PRN221PE_SP24_SE161471_TranXuanTien\\Eyeglasses_TranXuanTiena.csproj|d:\\pe exam\\prn221pe_sp24_tranxuantien\\prn221pe_sp24_se161471_tranxuantien\\eyeglasses_tranxuantiena.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{F090444F-A57E-48E6-BA00-F178E0217CB2}|PRN221PE_SP24_SE161471_TranXuanTien\\Eyeglasses_TranXuanTiena.csproj|solutionrelative:prn221pe_sp24_se161471_tranxuantien\\eyeglasses_tranxuantiena.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F090444F-A57E-48E6-BA00-F178E0217CB2}|PRN221PE_SP24_SE161471_TranXuanTien\\Eyeglasses_TranXuanTiena.csproj|d:\\pe exam\\prn221pe_sp24_tranxuantien\\prn221pe_sp24_se161471_tranxuantien\\pages\\additem.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F090444F-A57E-48E6-BA00-F178E0217CB2}|PRN221PE_SP24_SE161471_TranXuanTien\\Eyeglasses_TranXuanTiena.csproj|solutionrelative:prn221pe_sp24_se161471_tranxuantien\\pages\\additem.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:20:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:28:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Eyeglasses_TranXuanTiena",
+              "DocumentMoniker": "D:\\PE Exam\\PRN221PE_SP24_TranXuanTien\\PRN221PE_SP24_SE161471_TranXuanTien\\Eyeglasses_TranXuanTiena.csproj",
+              "RelativeDocumentMoniker": "PRN221PE_SP24_SE161471_TranXuanTien\\Eyeglasses_TranXuanTiena.csproj",
+              "ToolTip": "D:\\PE Exam\\PRN221PE_SP24_TranXuanTien\\PRN221PE_SP24_SE161471_TranXuanTien\\Eyeglasses_TranXuanTiena.csproj",
+              "RelativeToolTip": "PRN221PE_SP24_SE161471_TranXuanTien\\Eyeglasses_TranXuanTiena.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-23T14:23:52.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddItem.cshtml.cs",
+              "DocumentMoniker": "D:\\PE Exam\\PRN221PE_SP24_TranXuanTien\\PRN221PE_SP24_SE161471_TranXuanTien\\Pages\\AddItem.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN221PE_SP24_SE161471_TranXuanTien\\Pages\\AddItem.cshtml.cs",
+              "ToolTip": "D:\\PE Exam\\PRN221PE_SP24_TranXuanTien\\PRN221PE_SP24_SE161471_TranXuanTien\\Pages\\AddItem.cshtml.cs",
+              "RelativeToolTip": "PRN221PE_SP24_SE161471_TranXuanTien\\Pages\\AddItem.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:13:40.251Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

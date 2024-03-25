@@ -1,0 +1,106 @@
+﻿@page
+@model PRN221PE_SP24_AnDB.Pages.EyeclassRazorpageModel
+@using DataAccess.Models;
+@{
+    ViewData["Title"] = "View";
+    StoreAccount user = PRN221PE_SP24_AnDB.SessionExtensions.Get<StoreAccount>(HttpContext.Session, "User");
+    int role = user.Role ?? 0;
+}
+
+<h1 class="text-center mt-5"> Eyeglasses </h1>
+@if (role == 1)  // Add Item
+{
+    <a href="/AddItem" class="btn btn-success"> Add New ITem</a>
+}
+
+
+@* // Form Search *@
+<form class="form-horizontal mb-5" method="post">
+    <div class="input-group mb-3 mt-5">
+        <input type="text" class="form-control" placeholder="Input Price" asp-for="SearchPrice">
+        <input type="text" class="form-control" placeholder="Input Description" asp-for="SearchDescription">
+        <input type="hidden" name="CurrentPage" value="@Model.CurrentPage">
+        <button class="btn btn-primary" type="submit" asp-page-handler="SearchItem">Search</button>
+    </div>
+</form>
+<div>
+    @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"] as string))
+    {
+        <div class="alert alert-danger mt-3" role="alert">
+            @ViewData["ErrorMessage"]
+        </div>
+    }
+</div>
+
+
+
+@* Form Table *@
+<div class="table-responsive mt-5">
+    <table class="table table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Frame Color</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Created Date</th>
+                <th scope="col">Lens Type Name</th>
+                <th scope="col" class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.listEye == null || Model.listEye.ToList().Count == 0)
+            {
+                <tr>
+                    <td colspan="9" class="text-center">No auction</td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var item in Model.listEye)
+                {
+                    <form method="post">
+                    <tr>
+                        <td>@item.EyeglassesId</td>
+                        <td>@item.EyeglassesName</td>
+                        <td>@item.EyeglassesDescription</td>
+                        <td>@item.FrameColor</td>
+                        <td>@item.Price</td>
+                        <td>@item.Quantity</td>
+                        <td>@item.CreatedDate</td>
+                        <td>@item.LensType.LensTypeName</td>
+                        <td>
+                                @if (role == 1)
+                                {
+                                <a class="btn btn-warning" asp-page="/UpdateItem" asp-route-IdItemUpdate="@item.EyeglassesId">Update</a>
+                                <input type="hidden" asp-for="SearchPrice" value="@Model.SearchPrice">
+                                <input type="hidden" asp-for="SearchDescription" value="@Model.SearchDescription">
+                                <input type="hidden" name="CurrentPage" value="@Model.CurrentPage">
+                                <input type="hidden" name="IdItem" value="@item.EyeglassesId">
+                                <button class="btn btn-danger" asp-page-handler="DeleteItem">Delete</button>
+                                }
+                        </td>
+                    </tr>
+                    </form>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+@* Phân trang *@
+@if (Model.TotalPages > 1)
+{
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                    <a class="page-link" href="?currentPage=@i&searchPrice=@Model.SearchPrice&searchDescription=@Model.SearchDescription">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
+}
